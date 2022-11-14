@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2022 at 11:40 AM
+-- Generation Time: Nov 14, 2022 at 02:13 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -20,6 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `gaming_store`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `ID` int(11) NOT NULL,
+  `USERNAME` varchar(50) NOT NULL,
+  `PASSWORD` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`ID`, `USERNAME`, `PASSWORD`) VALUES
+(1, 'Youssef.Wakhidi.Admin', 'ADMIN123');
 
 -- --------------------------------------------------------
 
@@ -84,6 +103,12 @@ INSERT INTO `product` (`ID`, `LIBELLE`, `QUANTITE`, `PRIX`, `IMAGE`, `ID_CAT`) V
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
@@ -99,6 +124,12 @@ ALTER TABLE `product`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `category`

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2022 at 10:25 AM
+-- Generation Time: Nov 14, 2022 at 11:40 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -53,6 +53,7 @@ CREATE TABLE `product` (
   `LIBELLE` varchar(100) NOT NULL,
   `QUANTITE` int(11) NOT NULL,
   `PRIX` float NOT NULL,
+  `IMAGE` varchar(255) NOT NULL,
   `ID_CAT` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -60,23 +61,23 @@ CREATE TABLE `product` (
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`ID`, `LIBELLE`, `QUANTITE`, `PRIX`, `ID_CAT`) VALUES
-(1, 'Computer1', 25, 500, 1),
-(2, 'Computer2', 12, 600, 2),
-(3, 'Computer3', 15, 400, 3),
-(4, 'Computer4', 12, 430, 4),
-(5, 'Keyboard1', 35, 40, 1),
-(6, 'Keyboard2', 45, 45, 2),
-(7, 'Keyboard3', 25, 32, 3),
-(8, 'Keyboard4', 17, 38, 4),
-(9, 'Mouse1', 47, 20, 1),
-(10, 'Mouse2', 57, 17, 2),
-(11, 'Mouse3', 60, 24, 3),
-(12, 'Mouse4', 28, 14, 4),
-(13, 'Speaker1', 31, 70, 1),
-(14, 'Speaker2', 37, 52, 2),
-(15, 'Speaker3', 87, 95, 3),
-(16, 'Speaker4', 66, 74, 4);
+INSERT INTO `product` (`ID`, `LIBELLE`, `QUANTITE`, `PRIX`, `IMAGE`, `ID_CAT`) VALUES
+(1, 'Computer1', 25, 500, '', 1),
+(2, 'Computer2', 12, 600, '', 2),
+(3, 'Computer3', 15, 400, '', 3),
+(4, 'Computer4', 12, 430, '', 4),
+(5, 'Keyboard1', 35, 40, '', 1),
+(6, 'Keyboard2', 45, 45, '', 2),
+(7, 'Keyboard3', 25, 32, '', 3),
+(8, 'Keyboard4', 17, 38, '', 4),
+(9, 'Mouse1', 47, 20, '', 1),
+(10, 'Mouse2', 57, 17, '', 2),
+(11, 'Mouse3', 60, 24, '', 3),
+(12, 'Mouse4', 28, 14, '', 4),
+(13, 'Speaker1', 31, 70, '', 1),
+(14, 'Speaker2', 37, 52, '', 2),
+(15, 'Speaker3', 87, 95, '', 3),
+(16, 'Speaker4', 66, 74, '', 4);
 
 --
 -- Indexes for dumped tables

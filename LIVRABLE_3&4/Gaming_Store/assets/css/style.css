@@ -9,10 +9,29 @@
 .GS .store{
     text-align: center;
     background-color: black;
-    width: 70px;
+    width: 80px;
     color: white;
     font-weight: bold;
 }
 .s{
     height: 500px;
+}
+.con{
+    width: 40rem;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+.con .h1{
+    width: 40rem;
+}
+.con .discover_now{
+    width: 130px;
+    height: 56px;
+    background-color: #4B47FC;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
 }

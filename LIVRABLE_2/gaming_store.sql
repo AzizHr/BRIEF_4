@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2022 at 02:13 PM
--- Server version: 10.4.25-MariaDB
+-- Generation Time: 15 نوفمبر 2022 الساعة 17:01
+-- إصدار الخادم: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- بنية الجدول `admin`
 --
 
 CREATE TABLE `admin` (
@@ -34,7 +34,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `admin`
+-- إرجاع أو استيراد بيانات الجدول `admin`
 --
 
 INSERT INTO `admin` (`ID`, `USERNAME`, `PASSWORD`) VALUES
@@ -43,7 +43,7 @@ INSERT INTO `admin` (`ID`, `USERNAME`, `PASSWORD`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `category`
+-- بنية الجدول `category`
 --
 
 CREATE TABLE `category` (
@@ -52,19 +52,18 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `category`
+-- إرجاع أو استيراد بيانات الجدول `category`
 --
 
 INSERT INTO `category` (`ID_CAT`, `LIBELLE_CAT`) VALUES
 (1, 'Computers'),
 (2, 'Keyboards'),
-(3, 'Mouses'),
-(4, 'Speakers');
+(3, 'Mouses');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product`
+-- بنية الجدول `product`
 --
 
 CREATE TABLE `product` (
@@ -77,26 +76,22 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `product`
+-- إرجاع أو استيراد بيانات الجدول `product`
 --
 
 INSERT INTO `product` (`ID`, `LIBELLE`, `QUANTITE`, `PRIX`, `IMAGE`, `ID_CAT`) VALUES
 (1, 'Computer1', 25, 500, '', 1),
 (2, 'Computer2', 12, 600, '', 2),
 (3, 'Computer3', 15, 400, '', 3),
-(4, 'Computer4', 12, 430, '', 4),
 (5, 'Keyboard1', 35, 40, '', 1),
 (6, 'Keyboard2', 45, 45, '', 2),
 (7, 'Keyboard3', 25, 32, '', 3),
-(8, 'Keyboard4', 17, 38, '', 4),
 (9, 'Mouse1', 47, 20, '', 1),
 (10, 'Mouse2', 57, 17, '', 2),
 (11, 'Mouse3', 60, 24, '', 3),
-(12, 'Mouse4', 28, 14, '', 4),
 (13, 'Speaker1', 31, 70, '', 1),
 (14, 'Speaker2', 37, 52, '', 2),
-(15, 'Speaker3', 87, 95, '', 3),
-(16, 'Speaker4', 66, 74, '', 4);
+(15, 'Speaker3', 87, 95, '', 3);
 
 --
 -- Indexes for dumped tables
@@ -119,7 +114,7 @@ ALTER TABLE `category`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`ID`),
-  ADD KEY `ID_CAT` (`ID_CAT`);
+  ADD KEY `product_ibfk_1` (`ID_CAT`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -144,14 +139,14 @@ ALTER TABLE `product`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- Constraints for dumped tables
+-- قيود الجداول المحفوظة
 --
 
 --
--- Constraints for table `product`
+-- القيود للجدول `product`
 --
 ALTER TABLE `product`
-  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`ID_CAT`) REFERENCES `category` (`ID_CAT`);
+  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`ID_CAT`) REFERENCES `category` (`ID_CAT`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

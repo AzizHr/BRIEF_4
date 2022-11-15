@@ -16,14 +16,17 @@
 .s{
     height: 500px;
 }
-.con{
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 50px;
-    text-align: center;
 }
-.con .h1{
+.container1 .h1{
     width: 38rem;
 }
-.con .discover_now{
+.container1 .discover_now{
     width: 130px;
     height: 56px;
     background-color: #4B47FC;
@@ -57,6 +60,50 @@
     display: flex;
     justify-content: center;
 }
+.footer{
+    margin-top: 100px;
+    height: 500px;
+}
+.footer{
+    padding-top: 40px;
+}
+.footer .letter{
+    background-color: #4B47FC;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.footer .letter .send_email input{
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    outline: 1px solid white;
+    margin-right: 10px;
+    padding-left: 10px;
+    width: 220px;
+    background-color: #9997FF;
+    color: white;
+}
+.footer .letter .subscribe{
+    border: none;
+    background-color: white;
+    border-radius: 8px;
+    color: #4B47FC;
+    width: 90px;
+    height: 36px;
+}
 @media (max-width:740px) {
-
+    .container1{
+        margin-top: -120px;
+        text-align: center;
+    }
+    .container1 .h1{
+        font-size: 26px;
+        width: 30rem;
+    }
 }

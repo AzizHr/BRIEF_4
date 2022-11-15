@@ -8144,7 +8144,7 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #46b5d1; }
+  color: #4B47FC; }
   a:hover, a:focus {
     text-decoration: none !important;
     outline: none !important;
@@ -8159,7 +8159,7 @@ h1, h2, h3, h4, h5,
   color: #000; }
 
 .bg-primary {
-  background: #46b5d1 !important; }
+  background: #4B47FC !important; }
 
 .ftco-section {
   padding: 7em 0; }
@@ -8201,7 +8201,7 @@ h1, h2, h3, h4, h5,
     /* Firefox 18- */
     color: rgba(0, 0, 0, 0.3) !important; }
   .form-control:focus, .form-control:active {
-    border-color: #46b5d1 !important; }
+    border-color: #4B47FC !important; }
 
 textarea.form-control {
   height: inherit !important; }
@@ -8229,12 +8229,12 @@ textarea.form-control {
       font-weight: 500;
       color: #000; }
     .dbox p a {
-      color: #46b5d1; }
+      color: #4B47FC; }
   .dbox .icon {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: #46b5d1;
+    background: #4B47FC;
     margin: 0 auto;
     margin-bottom: 20px; }
     .dbox .icon span {
@@ -8266,8 +8266,8 @@ textarea.form-control {
   .btn:hover, .btn:active, .btn:focus {
     outline: none !important; }
   .btn.btn-primary {
-    background: #46b5d1 !important;
-    border-color: #46b5d1 !important;
+    background: #4B47FC !important;
+    border-color: #4B47FC !important;
     color: #fff; }
     .btn.btn-primary:hover, .btn.btn-primary:focus {
       border-color: #2d9bb7 !important;

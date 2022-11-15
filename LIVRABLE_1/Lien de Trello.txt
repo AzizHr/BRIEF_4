@@ -1,6 +1,3 @@
-<<<<<<< HEAD:LIVRABLE_1/Lien de Trello.txt
-https://trello.com/b/w9sGftSQ/brief4
-=======
 
-LIEN DE TRELLO : https://trello.com/b/w9sGftSQ/brief4
->>>>>>> 547158a81d0601d7ce4800be3f7b3fddf8b4bf92:LIVRABLE_1/lien_de_trello.txt
+https://trello.com/b/w9sGftSQ/brief4
+

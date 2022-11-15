@@ -97,6 +97,33 @@
     width: 90px;
     height: 36px;
 }
+.logo{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.img{
+    background-color: white;
+    width: 76px;
+    height: 76px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img img{
+    width: 80%;
+    height: 80%;
+}
+.f_d_c h3{
+    color: #E6E6E6;
+}
+.f_d_c p{
+    color: white;
+}
+.footer_down{
+    margin-top: 80px;  
+}
 @media (max-width:740px) {
     .container1{
         margin-top: -120px;
@@ -106,4 +133,15 @@
         font-size: 26px;
         width: 30rem;
     }
+    .footer{
+        height: 780px;
+    }
+.footer .letter .send_email{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.row1{
+    row-gap: 20px;
+}
 }

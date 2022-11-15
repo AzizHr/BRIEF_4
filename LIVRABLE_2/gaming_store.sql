@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 15 نوفمبر 2022 الساعة 17:01
--- إصدار الخادم: 10.4.25-MariaDB
+-- Generation Time: Nov 15, 2022 at 05:07 PM
+-- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -34,7 +34,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- إرجاع أو استيراد بيانات الجدول `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`ID`, `USERNAME`, `PASSWORD`) VALUES
@@ -43,7 +43,7 @@ INSERT INTO `admin` (`ID`, `USERNAME`, `PASSWORD`) VALUES
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `category`
+-- Table structure for table `category`
 --
 
 CREATE TABLE `category` (
@@ -52,7 +52,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- إرجاع أو استيراد بيانات الجدول `category`
+-- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`ID_CAT`, `LIBELLE_CAT`) VALUES
@@ -63,7 +63,7 @@ INSERT INTO `category` (`ID_CAT`, `LIBELLE_CAT`) VALUES
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `product`
+-- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
@@ -76,7 +76,7 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- إرجاع أو استيراد بيانات الجدول `product`
+-- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`ID`, `LIBELLE`, `QUANTITE`, `PRIX`, `IMAGE`, `ID_CAT`) VALUES
@@ -139,11 +139,11 @@ ALTER TABLE `product`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- قيود الجداول المحفوظة
+-- Constraints for dumped tables
 --
 
 --
--- القيود للجدول `product`
+-- Constraints for table `product`
 --
 ALTER TABLE `product`
   ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`ID_CAT`) REFERENCES `category` (`ID_CAT`) ON DELETE CASCADE ON UPDATE CASCADE;

@@ -17,13 +17,11 @@
     height: 500px;
 }
 .con{
-    width: 40rem;
-    margin: 0 auto;
     margin-top: 50px;
     text-align: center;
 }
-.con .h2{
-    width: 36rem;
+.con .h1{
+    width: 38rem;
 }
 .con .discover_now{
     width: 130px;

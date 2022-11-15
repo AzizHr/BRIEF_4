@@ -1,0 +1,18 @@
+.GS{
+    display: flex;
+    text-align: center;
+}
+.GS .gaming{
+    color: black;
+    font-weight: bold;
+}
+.GS .store{
+    text-align: center;
+    background-color: black;
+    width: 70px;
+    color: white;
+    font-weight: bold;
+}
+.s{
+    height: 500px;
+}

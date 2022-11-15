@@ -35,3 +35,23 @@
     font-weight: bold;
     margin-top: 20px;
 }
+.product{
+    text-align: center;
+    box-shadow: 0px 0px 12px 0px rgb(104, 104, 104);
+    width: 300px;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+}
+.product img{
+    width: 80%;
+    margin: 0 auto;
+}
+.ctr{
+    margin-top: 10rem;
+}
+.row{
+    row-gap: 10rem;
+}

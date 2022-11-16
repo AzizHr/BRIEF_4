@@ -64,6 +64,10 @@
             }
 
         }
+        if(isset($_POST["cencel"])){
+            header("location:management.php");
+            exit();
+        }
     
     ?>
     <form method="POST" enctype="multipart/form-data">

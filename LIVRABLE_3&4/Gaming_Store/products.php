@@ -13,7 +13,6 @@ require_once 'header.php'
             </div>
         </div>
       </div>
-
       <div class="container second_cont">
         <div class="row">
             <div class="col-md-3 cat ">

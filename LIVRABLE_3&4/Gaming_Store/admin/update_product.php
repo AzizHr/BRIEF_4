@@ -7,11 +7,13 @@ $id=$_GET['id'];
 $stmt=$conn->prepare("SELECT LIBELLE , QUANTITE , PRIX , IMAGE FROM `product` WHERE ID=:id");
 $stmt->bindParam(':id',$id);
 $stmt->execute();
-while($row=$stmt->fetch()){
+if ($stmt->rowCount() > 0) {
+  while($row=$stmt->fetch()){
     $libelle1 = $row["LIBELLE"];
     $quantite1 = $row["QUANTITE"];
     $prix1 = $row["PRIX"];
     $image1 = $row["IMAGE"];
+}
 }
 ?>
 <!DOCTYPE html>
@@ -55,11 +57,10 @@ while($row=$stmt->fetch()){
 
     <?php
         if(isset($_GET["save"])){
-            $id=$_GET['id'];
-            $libelle = $_GET["libelle"];
-            $quantite = $_GET["quantite"];
-            $prix = $_GET["prix"];
-            $image = $_FILES['image']['name'];
+            $libelle = $_GET["LIBELLE"];
+            $quantite = $_GET["QUANTITE"];
+            $prix = $_GET["PRIX"];
+            $image = $_FILES['IMAGE']['name'];
 
             $query = $conn->prepare("UPDATE product SET LIBELLE = :L , QUANTITE = :Q , PRIX = :P, IMAGE = :I WHERE ID=:id");
             $query->bindParam(":L" , $libelle);

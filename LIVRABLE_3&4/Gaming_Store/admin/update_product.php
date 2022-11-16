@@ -8,10 +8,10 @@ $stmt=$conn->prepare("SELECT LIBELLE , QUANTITE , PRIX , IMAGE FROM `product` WH
 $stmt->bindParam(':id',$id);
 $stmt->execute();
 while($row=$stmt->fetch()){
-    $libelle = $row["LIBELLE"];
-    $quantite = $row["QUANTITE"];
-    $prix = $row["PRIX"];
-    $image = $row["IMAGE"];
+    $libelle1 = $row["LIBELLE"];
+    $quantite1 = $row["QUANTITE"];
+    $prix1 = $row["PRIX"];
+    $image1 = $row["IMAGE"];
 }
 ?>
 <!DOCTYPE html>
@@ -55,7 +55,7 @@ while($row=$stmt->fetch()){
 
     <?php
         if(isset($_GET["save"])){
-          $id=$_GET['id'];
+            $id=$_GET['id'];
             $libelle = $_GET["libelle"];
             $quantite = $_GET["quantite"];
             $prix = $_GET["prix"];
@@ -80,18 +80,18 @@ while($row=$stmt->fetch()){
     <form method="GET" enctype="multipart/form-data">
     <div class="container add">
         <h2 class="text-center">Update a Product</h2>
-        <div style="width: 160px; height:160px; align-self: center;"><img src="../images/<?php echo $image ?>" alt="" style="width: 100%; height:100%;"></div>
+        <div style="width: 160px; height:160px; align-self: center;"><img src="../images/<?php echo $image1 ?>" alt="" style="width: 100%; height:100%;"></div>
         <div>
             <label for="libelle" class="form-text">Name</label>
-            <input type="text" name="libelle" class="form-control" value="<?php echo $libelle; ?>">
+            <input type="text" name="libelle" class="form-control" value="<?php echo $libelle1; ?>">
         </div>
         <div>
             <label for="quantite" class="form-text">Quantite</label>
-            <input type="text" name="quantite" class="form-control" value="<?php echo $quantite; ?>">
+            <input type="text" name="quantite" class="form-control" value="<?php echo $quantite1; ?>">
         </div>
         <div>
             <label for="prix" class="form-text">Price</label>
-            <input type="text" name="prix" class="form-control" value="<?php echo $prix; ?>">
+            <input type="text" name="prix" class="form-control" value="<?php echo $prix1; ?>">
         </div>
         <div>
         <label for="image" class="form-text">Update product image</label>

@@ -1,8 +1,6 @@
 <?php 
   require_once '../php/database.php';
 
-  // $_SESSION['']
-
 $id=$_GET['id'];
 $stmt=$conn->prepare("SELECT LIBELLE , QUANTITE , PRIX , IMAGE FROM `product` WHERE ID=:id");
 $stmt->bindParam(':id',$id);
@@ -53,30 +51,14 @@ while($row=$stmt->fetch()){
             </div>
         </nav>
 
-    <?php
-        if(isset($_GET["save"])){
-          $id=$_GET['id'];
-            $libelle = $_GET["libelle"];
-            $quantite = $_GET["quantite"];
-            $prix = $_GET["prix"];
-            $image = $_FILES['image']['name'];
-
-            $query = $conn->prepare("UPDATE product SET LIBELLE = :L , QUANTITE = :Q , PRIX = :P, IMAGE = :I WHERE ID=:id");
-            $query->bindParam(":L" , $libelle);
-            $query->bindParam(":Q" , $quantite);
-            $query->bindParam(":P" , $prix);
-            $query->bindParam(":I" , $image);
-            $query->bindParam(":id" , $id);
-            $query->execute();
-
-            header("location:management.php");
-            exit();
-        }
-    ?>
-    <form method="GET" enctype="multipart/form-data">
+    <form method="GET" action="update.php" enctype="multipart/form-data">
     <div class="container add">
         <h2 class="text-center">Update a Product</h2>
         <div style="width: 160px; height:160px; align-self: center;"><img src="../images/<?php echo $image ?>" alt="" style="width: 100%; height:100%;"></div>
+        <div>
+            <label for="id" class="form-text">Numero</label>
+            <input type="text" name="id" class="form-control" value="<?php echo $id; ?>">
+        </div>
         <div>
             <label for="libelle" class="form-text">Name</label>
             <input type="text" name="libelle" class="form-control" value="<?php echo $libelle; ?>">
@@ -95,7 +77,7 @@ while($row=$stmt->fetch()){
         </div>
         <div class="btns">
             <button class="btn btn-warning">Cencel</button>
-            <button class="btn btn-success" name="save">Save</button>
+            <button type="submit" class="btn btn-success">Save</button>
         </div>
     </div>
     </form>

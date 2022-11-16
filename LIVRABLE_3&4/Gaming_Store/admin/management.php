@@ -97,7 +97,7 @@ require_once '../php/database.php';
             var prodUpdate = document.querySelectorAll(".update");
             prodUpdate.forEach((prod1) => {
                 prod1.addEventListener('click', function() {
-                    location.replace("update_product.php?id="+prod1.value+"");
+                    location.replace("show.php?id="+prod1.value+"");
                 });
             })
         </script>

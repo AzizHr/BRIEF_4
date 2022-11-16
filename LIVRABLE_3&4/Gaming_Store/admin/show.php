@@ -52,27 +52,6 @@ if ($stmt->rowCount() > 0) {
               </div>
             </div>
         </nav>
-
-    <?php
-        if(isset($_GET["save"])){
-          $id=$_GET['id'];
-            $libelle = $_GET["libelle"];
-            $quantite = $_GET["quantite"];
-            $prix = $_GET["prix"];
-            $image = $_FILES['image']['name'];
-
-            $query = $conn->prepare("UPDATE product SET LIBELLE = :L , QUANTITE = :Q , PRIX = :P, IMAGE = :I WHERE ID=:id");
-            $query->bindParam(":L" , $libelle);
-            $query->bindParam(":Q" , $quantite);
-            $query->bindParam(":P" , $prix);
-            $query->bindParam(":I" , $image);
-            $query->bindParam(":id" , $id);
-            $query->execute();
-
-            header("location:management.php");
-            exit();
-        }
-    ?>
     <form method="GET" enctype="multipart/form-data">
     <div class="container add">
         <h2 class="text-center">Update a Product</h2>
@@ -103,7 +82,6 @@ if ($stmt->rowCount() > 0) {
         </div>
     </div>
     </form>
-
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>

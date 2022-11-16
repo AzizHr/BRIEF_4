@@ -28,20 +28,27 @@ require_once 'header.php' ;
                         <td><p class="text-center">'.$row['QUANTITE'].'</p></td>
                         <td><p class="text-center">'.$row['PRIX'].' $</p></td>
                         <td>
-                            <button class="btn btn-danger" value='.$row['ID'].'>Delete</button>
-                            <button class="btn btn-primary" value='.$row['ID'].'>Update</button>
+                            <form method="POST">
+                            <button name="delete" class="btn btn-danger" value='.$row['ID'].'>Delete</button>
+                            <button name="update" class="btn btn-primary" value='.$row['ID'].'>Update</button>
+                            </form>
                         </td>
                         </tr>
                     ';
                   }
                 } 
- 
+
+                if(isset($_POST["update"])){
+                    header("Location:../update_product.php");
+                }
             ?>
            
         </table>
 
         <div class="container d-flex justify-content-center pb-5">
-            <button class="btn btn-success">Ajouter</button>
+            <form method="POST" action="add_product.php">
+            <button type="submit" class="btn btn-success" name="add">Ajouter</button>
+            </form>
         </div>
     </div>
 

@@ -42,7 +42,7 @@ require_once 'header.php';
                       <div class="product">
                         <img height="250" width="200" src="images/'.$row['IMAGE'].'">
                         <h5 class="product_name">'.$row['LIBELLE'].'</h5>
-                        <h4 class="product_price">'.$row['LIBELLE'].' $</h4>
+                        <h4 class="product_price">'.$row['PRIX'].' $</h4>
                       </div>
                   </div>
                     ';

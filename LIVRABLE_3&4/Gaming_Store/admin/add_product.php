@@ -10,7 +10,7 @@
     <title>Management</title>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/add_product.css">
+<link rel="stylesheet" href="../assets/css/add_product.css">
 </head>
 <body>
         <nav class="navbar navbar-expand-lg bg-light">
@@ -66,9 +66,9 @@
         }
     
     ?>
-    <div class="container add">
+    <form method="POST" enctype="multipart/form-data">
+    <div class="container add" >
         <h2 class="text-center">Add a Product</h2>
-        <form method="POST" enctype="multipart/form-data">
         <div>
             <label for="libelle" class="form-text">Name</label>
             <input type="text" name="libelle" class="form-control">
@@ -81,6 +81,7 @@
             <label for="prix" class="form-text">Price</label>
             <input type="text" name="prix" class="form-control">
         </div>
+        <div>
         <label for="image" class="form-text">Update product image</label>
         <input type="file" name="image" class="form-control">
         </div>
@@ -88,8 +89,9 @@
             <button class="btn btn-warning" name="cencel">Cencel</button>
             <button class="btn btn-success" name="save">Save</button>
         </div>
-        </form>
     </div>
+    </form>
+    
 
     <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

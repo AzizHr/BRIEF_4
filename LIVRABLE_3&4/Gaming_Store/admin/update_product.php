@@ -72,6 +72,10 @@ while($row=$stmt->fetch()){
             header("location:management.php");
             exit();
         }
+        if(isset($_POST["cencel"])){
+          header("location:management.php");
+          exit();
+      }
     ?>
     <form method="GET" enctype="multipart/form-data">
     <div class="container add">

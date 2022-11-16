@@ -5,11 +5,13 @@ $id=$_GET['id'];
 $stmt=$conn->prepare("SELECT LIBELLE , QUANTITE , PRIX , IMAGE FROM `product` WHERE ID=:id");
 $stmt->bindParam(':id',$id);
 $stmt->execute();
-while($row=$stmt->fetch()){
-    $libelle = $row["LIBELLE"];
-    $quantite = $row["QUANTITE"];
-    $prix = $row["PRIX"];
-    $image = $row["IMAGE"];
+if ($stmt->rowCount() > 0) {
+  while($row=$stmt->fetch()){
+    $libelle1 = $row["LIBELLE"];
+    $quantite1 = $row["QUANTITE"];
+    $prix1 = $row["PRIX"];
+    $image1 = $row["IMAGE"];
+}
 }
 ?>
 <!DOCTYPE html>
@@ -51,25 +53,45 @@ while($row=$stmt->fetch()){
             </div>
         </nav>
 
-    <form method="GET" action="update.php" enctype="multipart/form-data">
+    <?php
+        if(isset($_GET["save"])){
+          $id=$_GET['id'];
+            $libelle = $_GET["libelle"];
+            $quantite = $_GET["quantite"];
+            $prix = $_GET["prix"];
+            $image = $_FILES['image']['name'];
+
+            $query = $conn->prepare("UPDATE product SET LIBELLE = :L , QUANTITE = :Q , PRIX = :P, IMAGE = :I WHERE ID=:id");
+            $query->bindParam(":L" , $libelle);
+            $query->bindParam(":Q" , $quantite);
+            $query->bindParam(":P" , $prix);
+            $query->bindParam(":I" , $image);
+            $query->bindParam(":id" , $id);
+            $query->execute();
+
+            header("location:management.php");
+            exit();
+        }
+    ?>
+    <form method="GET" enctype="multipart/form-data">
     <div class="container add">
         <h2 class="text-center">Update a Product</h2>
-        <div style="width: 160px; height:160px; align-self: center;"><img src="../images/<?php echo $image ?>" alt="" style="width: 100%; height:100%;"></div>
+        <div style="width: 160px; height:160px; align-self: center;"><img src="../images/<?php echo $image1 ?>" alt="" style="width: 100%; height:100%;"></div>
         <div>
             <label for="id" class="form-text">Numero</label>
             <input type="text" name="id" class="form-control" value="<?php echo $id; ?>">
         </div>
         <div>
             <label for="libelle" class="form-text">Name</label>
-            <input type="text" name="libelle" class="form-control" value="<?php echo $libelle; ?>">
+            <input type="text" name="libelle" class="form-control" value="<?php echo $libelle1; ?>">
         </div>
         <div>
             <label for="quantite" class="form-text">Quantite</label>
-            <input type="text" name="quantite" class="form-control" value="<?php echo $quantite; ?>">
+            <input type="text" name="quantite" class="form-control" value="<?php echo $quantite1; ?>">
         </div>
         <div>
             <label for="prix" class="form-text">Price</label>
-            <input type="text" name="prix" class="form-control" value="<?php echo $prix; ?>">
+            <input type="text" name="prix" class="form-control" value="<?php echo $prix1; ?>">
         </div>
         <div>
         <label for="image" class="form-text">Update product image</label>

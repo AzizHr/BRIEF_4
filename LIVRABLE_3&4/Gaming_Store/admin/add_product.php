@@ -20,19 +20,20 @@ require_once 'header.php' ;
             $libelle = $_POST["libelle"];
             $quantite = $_POST["quantite"];
             $prix = $_POST["prix"];
+            $image = $_FILES['image']['name'];
 
-            $query = $conn->prepare("INSERT INTO product (LIBELLE , QUANTITE , PRIX)  VALUES (:L , :Q , :P)");
+            $query = $conn->prepare("INSERT INTO product (LIBELLE , QUANTITE , PRIX , IMAGE)  VALUES (:L , :Q , :P , :I)");
             $query->bindParam("L" , $libelle);
             $query->bindParam("Q" , $quantite);
             $query->bindParam("P" , $prix);
-
+            $query->bindParam("I" , $image);
             if($query->execute()){
-                echo '<div class="alert alert-success" role="alert">
+                echo '<div container class="alert alert-success" role="alert">
                 A Product has been added successfully!
               </div>';
             }
             else{
-                echo '<div class="alert alert-success" role="alert">
+                echo '<div container class="alert alert-success" role="alert">
                 A Product has not been added!
               </div>';
             }
@@ -42,7 +43,7 @@ require_once 'header.php' ;
     ?>
     <div class="container add">
         <h2 class="text-center">Add a Product</h2>
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
         <div>
             <label for="libelle" class="form-text">Name</label>
             <input type="text" name="libelle" class="form-control">

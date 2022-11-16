@@ -1,0 +1,13 @@
+.add{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin-top: 60px;
+}
+.btns{
+    display: flex;
+    justify-content: end;
+    column-gap: 20px;
+    margin-top: 30px;
+}

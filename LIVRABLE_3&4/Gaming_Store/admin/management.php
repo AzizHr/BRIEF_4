@@ -35,6 +35,22 @@ require_once 'header.php' ;
                         </td>
                         </tr>
                     ';
+                    if(isset($_POST["delete"])){
+                        $ID = $row['ID'];
+                        $delete = $conn->prepare("DELETE FROM product WHERE ID = :ID");
+                        $delete->bindParam("ID" , $ID);
+
+                        if($delete->execute()){
+                            echo '<div class="container alert alert-success" role="alert">
+                                    A Product has been deleted successfully!
+                                </div>';
+                        }
+                        else{
+                            echo '<div class="container alert alert-danger" role="alert">
+                                    A Product has not been deleted!
+                                </div>';
+                        }
+                    }
                   }
                 } 
 

@@ -11,8 +11,7 @@ $stmt->bindParam(':pass',$pass);
 $stmt->execute();
 if ($stmt->rowCount()>0) {
   while($row = $stmt->fetch()){
-    header('location:');
-    exit();
+    echo 'bien';
   }
 } 
 else {

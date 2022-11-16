@@ -9,17 +9,20 @@ require_once 'header.php'
 		</div>
 		<div class="col-md-6">
 			<p class="txt_login">Login</p>
-			<div class="form-group input">
-				<label for="usr">User name :</label>
-				<input type="text" class="form-control" placeholder="User name">
-			</div>
-			<div class="form-group input">
-				<label for="pwd">Password :</label>
-				<input type="password" class="form-control" placeholder="Password">
-			</div>	
-			<div class="form-group input">
-				<button type="button" class="btn btn-primary col-md-12" id="btn_login">Login</button>
-			</div>	
+			<form action="php/connect.php" method="post">
+				<div class="form-group input">
+					<label for="usr">User name :</label>
+					<input type="text" class="form-control" name="username" placeholder="User name" required>
+				</div>
+				<div class="form-group input">
+					<label for="pwd">Password :</label>
+					<input type="password" class="form-control" name="password"  placeholder="Password" required>
+				</div>	
+				<div class="form-group input">
+					<button type="submit" class="btn btn-primary col-md-12" id="btn_login">Login</button>
+				</div>	
+			</form>
+			
 		</div>
 	</div>
 </div>

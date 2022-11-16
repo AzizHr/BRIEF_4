@@ -21,8 +21,16 @@ require_once 'header.php'
 				<div class="form-group input">
 					<button type="submit" class="btn btn-primary col-md-12" id="btn_login">Login</button>
 				</div>	
-			</form>
-			
+
+				<?php
+					if(isset($_GET['etat'])){
+						echo '
+						<div class="alert alert-danger mt-3" role="alert">
+  							User name or password invalid !
+						</div>';
+					}
+				 ?>
+			</form>	
 		</div>
 	</div>
 </div>

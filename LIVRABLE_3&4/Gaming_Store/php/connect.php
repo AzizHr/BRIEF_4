@@ -11,11 +11,15 @@ $stmt->bindParam(':pass',$pass);
 $stmt->execute();
 if ($stmt->rowCount()>0) {
   while($row = $stmt->fetch()){
-    echo 'bien';
+    $_SESSION['name']=$row['USERNAME'];
+    $_SESSION['pass']=$row['PASSWORD'];
+    header('location:../management.php');
+    exit();
   }
+  
 } 
 else {
-    header('location:login.php?etat=fail');
+    header('location:../login.php?etat=fail');
     exit();
 }
 

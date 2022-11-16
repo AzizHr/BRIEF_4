@@ -13,10 +13,9 @@ if ($stmt->rowCount()>0) {
   while($row = $stmt->fetch()){
     $_SESSION['name']=$row['USERNAME'];
     $_SESSION['pass']=$row['PASSWORD'];
-    header('location:../management.php');
+    header('location:../admin/management.php');
     exit();
   }
-  
 } 
 else {
     header('location:../login.php?etat=fail');

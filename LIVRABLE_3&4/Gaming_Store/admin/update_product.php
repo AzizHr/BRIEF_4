@@ -1,5 +1,18 @@
 <?php 
   require_once '../php/database.php';
+
+  // $_SESSION['']
+
+$id=$_GET['id'];
+$stmt=$conn->prepare("SELECT LIBELLE , QUANTITE , PRIX , IMAGE FROM `product` WHERE ID=:id");
+$stmt->bindParam(':id',$id);
+$stmt->execute();
+while($row=$stmt->fetch()){
+    $libelle = $row["LIBELLE"];
+    $quantite = $row["QUANTITE"];
+    $prix = $row["PRIX"];
+    $image = $row["IMAGE"];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,21 +53,41 @@
             </div>
         </nav>
 
-    <form method="GET">
+    <?php
+        if(isset($_GET["save"])){
+          $id=$_GET['id'];
+            $libelle = $_GET["libelle"];
+            $quantite = $_GET["quantite"];
+            $prix = $_GET["prix"];
+            $image = $_FILES['image']['name'];
+
+            $query = $conn->prepare("UPDATE product SET LIBELLE = :L , QUANTITE = :Q , PRIX = :P, IMAGE = :I WHERE ID=:id");
+            $query->bindParam(":L" , $libelle);
+            $query->bindParam(":Q" , $quantite);
+            $query->bindParam(":P" , $prix);
+            $query->bindParam(":I" , $image);
+            $query->bindParam(":id" , $id);
+            $query->execute();
+
+            header("location:management.php");
+            exit();
+        }
+    ?>
+    <form method="GET" enctype="multipart/form-data">
     <div class="container add">
         <h2 class="text-center">Update a Product</h2>
-        <div style="width: 160px; height:160px; align-self: center;"><img src="/images/computer1.jpg" alt="" style="width: 100%; height:100%;"></div>
+        <div style="width: 160px; height:160px; align-self: center;"><img src="../images/<?php echo $image ?>" alt="" style="width: 100%; height:100%;"></div>
         <div>
             <label for="libelle" class="form-text">Name</label>
-            <input type="text" name="libelle" class="form-control" value="Pc Gamer 1">
+            <input type="text" name="libelle" class="form-control" value="<?php echo $libelle; ?>">
         </div>
         <div>
             <label for="quantite" class="form-text">Quantite</label>
-            <input type="text" name="quantite" class="form-control" value="23">
+            <input type="text" name="quantite" class="form-control" value="<?php echo $quantite; ?>">
         </div>
         <div>
             <label for="prix" class="form-text">Price</label>
-            <input type="text" name="prix" class="form-control" value="1992 $">
+            <input type="text" name="prix" class="form-control" value="<?php echo $prix; ?>">
         </div>
         <div>
         <label for="image" class="form-text">Update product image</label>
@@ -62,7 +95,7 @@
         </div>
         <div class="btns">
             <button class="btn btn-warning">Cencel</button>
-            <button class="btn btn-success">Save</button>
+            <button class="btn btn-success" name="save">Save</button>
         </div>
     </div>
     </form>

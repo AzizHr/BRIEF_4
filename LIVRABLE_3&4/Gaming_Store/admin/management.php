@@ -76,7 +76,7 @@ require_once '../php/database.php';
                         <td><p class="text-center">' . $row['PRIX'] . ' $</p></td>
                         <td>
                             <button class="btn btn-danger delete" value="'.$row['ID'].'">Delete</button>
-                            <button class="btn btn-primary delete" value="'.$row['ID'].'">Update</button>
+                            <button class="btn btn-primary update" value="'.$row['ID'].'">Update</button>
                         </td>
                         </tr>
                     ';
@@ -91,6 +91,13 @@ require_once '../php/database.php';
             prodDelete.forEach((prod) => {
                 prod.addEventListener('click', function() {
                     location.replace("delete_prod.php?id="+prod.value+"");
+                });
+            });
+
+            var prodUpdate = document.querySelectorAll(".update");
+            prodUpdate.forEach((prod1) => {
+                prod1.addEventListener('click', function() {
+                    location.replace("update_product.php?id="+prod1.value+"");
                 });
             })
         </script>

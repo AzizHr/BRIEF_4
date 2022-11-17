@@ -16,18 +16,18 @@ require_once 'header.php';
         </div>
       </div>
       <div class="categories">
-            <div class="category selected">
+            <button class="category selected">
                 <p>Computers</p> 
-            </div>
-            <div class="category">
+            </button>
+            <button class="category">
                 <p>Keyboards</p> 
-            </div>
-            <div class="category" >
+            </button>
+            <button class="category" >
                 <p>Mouses</p> 
-            </div>
-            <div class="category">
+            </button>
+            <button class="category">
                 <p>Speakers</p> 
-            </div>
+            </button>
         </div>
       </div>
     

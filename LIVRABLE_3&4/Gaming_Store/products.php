@@ -2,6 +2,7 @@
 require_once 'php/database.php';
 require_once 'header.php';
 ?>
+      <link rel="stylesheet" href="assets/css/cat.css">
       <div class="container first_cont">
         <div class="row">
             <div class="col-md-6">
@@ -15,16 +16,16 @@ require_once 'header.php';
         </div>
       </div>
       <div class="categories">
-            <div class="category">
-                <p class="">Computers</p> 
+            <div class="category selected" id="computers">
+                <p>Computers</p> 
             </div>
-            <div class="category">
+            <div class="category" id="keyboards">
                 <p>Keyboards</p> 
             </div>
-            <div class="category">
+            <div class="category" id="mouses">
                 <p>Mouses</p> 
             </div>
-            <div class="category">
+            <div class="category" id="speakers">
                 <p>Speakers</p> 
             </div>
         </div>

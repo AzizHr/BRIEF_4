@@ -1,0 +1,25 @@
+.categories{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 200px;
+}
+.categories .category{
+    border-radius: 10px;
+    border: 2px solid #4B47FC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    padding-top: 10px;
+}
+.categories .selected{
+    background-color: #4a47fc20;
+    color: #4B47FC;
+}
+.categories .category p{
+    font-weight: bold;
+}

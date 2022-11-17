@@ -61,9 +61,7 @@ require_once 'header.php';
                     ';
                   }
                 } 
-
               }
-
             ?>
         </div>
       </div>

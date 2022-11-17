@@ -32,6 +32,20 @@ require_once 'header.php'
           width: 100%;
           border-radius: 90px;
         }
+        .about-us{
+          margin-top:200px;
+        }
+        .about{
+          display:flex;
+          justify-content:center;
+          align-items:center;
+        }
+        .about h1{
+          font-size:50px;
+        }
+        .about p{
+          font-size:20px;
+        }
       </style>
       <div class="GS container justify-content-center mt-5">
         <h2 class="gaming">Gaming</h2> <div class="store"><h2>Store</h2></div>
@@ -81,6 +95,19 @@ require_once 'header.php'
           </div>
         </div>
       </div>
+
+      <div class="container about-us">
+        <div class="row about">
+          <div class="col-lg-8">
+            <img src="images/about-us.jpg" alt="" style="width:80%;">
+          </div>
+          <div class="col-lg-4">
+            <h1>About Us</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A possimus veritatis iure, dignissimos rerum error libero? Fuga consequatur ullam cumque voluptatibus. Facere in dignissimos fugit autem eius numquam! Ducimus, quibusdam!</p>
+          </div>
+        </div>
+      </div>
+
 
       <div class="container justify-content-center user-reviews">
         <h2 class="text-center">Our Clients Reviews</h2>

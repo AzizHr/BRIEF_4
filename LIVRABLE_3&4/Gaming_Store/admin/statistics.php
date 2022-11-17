@@ -49,7 +49,14 @@ require_once '../php/database.php';
                     <div class="img_h1">
                         <img src="../images/total_products.png" alt="" class="i_m_g">
                     </div>
-                    <h3>100</h3>
+                    <?php
+                        $stmt = $conn->query("SELECT count(*) as 'nbr' FROM `product`");
+                        if ($stmt->rowCount()>0) {
+                        while($row = $stmt->fetch()){
+                                echo '<h3>'.$row['nbr'].'</h3>';
+                            }
+                        } 
+                    ?>
                     <p>Total Products</p>
                 </div>
             </div>
@@ -58,7 +65,14 @@ require_once '../php/database.php';
                     <div class="img_h2">
                         <img src="../images/max.png" alt="" class="i_m_g">
                     </div>
-                    <h3>100</h3>
+                    <?php
+                        $stmt = $conn->query("SELECT max(prix) as 'max' FROM `product`");
+                        if ($stmt->rowCount()>0) {
+                        while($row = $stmt->fetch()){
+                                echo '<h3>'.$row['max'].'</h3>';
+                            }
+                        } 
+                    ?>
                     <p>Max Price</p>
                 </div>
             </div>
@@ -67,7 +81,14 @@ require_once '../php/database.php';
                     <div class="img_h3">
                         <img src="../images/min.png" alt="" class="i_m_g">
                     </div>
-                    <h3>100</h3>
+                    <?php
+                        $stmt = $conn->query("SELECT min(prix) as 'min' FROM `product`");
+                        if ($stmt->rowCount()>0) {
+                        while($row = $stmt->fetch()){
+                                echo '<h3>'.$row['min'].'</h3>';
+                            }
+                        } 
+                    ?>
                     <p>Min Price</p>
                 </div>
             </div>
@@ -76,7 +97,14 @@ require_once '../php/database.php';
                     <div class="img_h4">
                         <img src="../images/average.png" alt="" class="i_m_g">
                     </div>
-                    <h3>100</h3>
+                    <?php
+                        $stmt = $conn->query("SELECT avg(prix) as 'avg' FROM `product`");
+                        if ($stmt->rowCount()>0) {
+                        while($row = $stmt->fetch()){
+                                echo '<h3>'.$row['avg'].'</h3>';
+                            }
+                        } 
+                    ?>
                     <p>Prices Average</p>
                 </div>
             </div>

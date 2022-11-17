@@ -1,3 +1,6 @@
+.sts{
+    row-gap: 20px;
+}
 .sts_h1 {
     border-radius: 10px;
     background-color: #FEE3E5;

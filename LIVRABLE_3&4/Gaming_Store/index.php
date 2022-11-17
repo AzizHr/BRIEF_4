@@ -1,6 +1,38 @@
 <?php 
 require_once 'header.php' 
 ?>
+      <style>
+        .user-reviews{
+          margin-top:160px;
+          padding-bottom:100px;
+        }
+        .reviews-row{
+          display:flex;
+          row-gap:60px;
+        }
+        .review{
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          column-gap:20px;
+        }
+        .review .r-info{
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          justify-content:center;
+          margin-top:50px;
+        }
+        .r-img{
+          width: 80px;
+          height: 80px;
+          border-radius: 90px;
+        }
+        .r-img img{
+          width: 100%;
+          border-radius: 90px;
+        }
+      </style>
       <div class="GS container justify-content-center mt-5">
         <h2 class="gaming">Gaming</h2> <div class="store"><h2>Store</h2></div>
       </div>
@@ -47,6 +79,48 @@ require_once 'header.php'
               <h4 class="product_price">1222 $</h4>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="container justify-content-center user-reviews">
+        <h2 class="text-center">Our Clients Reviews</h2>
+        <div class="row mt-5 reviews-row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="review">
+            <div class="r-img"><img src="images/user1.jpg" alt=""></div>
+            <div class="r-info">
+              <h5>Aziz Harkati</h5>
+              <p>Good Gaming Store</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="review">
+            <div class="r-img"><img src="images/user2.jpg" alt=""></div>
+            <div class="r-info">
+              <h5>Mohamed Amin</h5>
+              <p>Best Pcs Gaming</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="review">
+            <div class="r-img"><img src="images/user3.jpg" alt=""></div>
+            <div class="r-info">
+              <h5>Kamal Jamal</h5>
+              <p>Nice Website</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="review">
+            <div class="r-img"><img src="images/user4.jpg" alt=""></div>
+            <div class="r-info">
+              <h5>Ahmed Rabie</h5>
+              <p>Thank You</p>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
 

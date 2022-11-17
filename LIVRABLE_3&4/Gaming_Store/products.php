@@ -16,17 +16,14 @@ require_once 'header.php';
         </div>
       </div>
       <div class="categories">
-            <div class="category selected">
+            <div class="category selected" id="computer">
                 <p>Computers</p> 
             </div>
-            <div class="category">
+            <div class="category" id="keyboard">
                 <p>Keyboards</p> 
             </div>
-            <div class="category" >
+            <div class="category" id="mouse">
                 <p>Mouses</p> 
-            </div>
-            <div class="category">
-                <p>Speakers</p> 
             </div>
         </div>
       </div>
@@ -34,7 +31,8 @@ require_once 'header.php';
       <div class="container ctr">
         <div class="row align-content-center">
           <?php
-                $stmt = $conn->query("SELECT `ID`, `LIBELLE`, `QUANTITE`, `PRIX`, `IMAGE` FROM `product`");
+              if(isset($_GET['cat'])==false){
+                $stmt = $conn->query("SELECT `ID`, `LIBELLE`, `QUANTITE`, `PRIX`, `IMAGE`, `ID_CAT` FROM `product`");
                 if ($stmt->rowCount()>0) {
                   while($row = $stmt->fetch()){
                     echo 
@@ -48,9 +46,30 @@ require_once 'header.php';
                     ';
                   }
                 } 
+
+              }
+              else{
+                $stmt = $conn->query("SELECT `ID`, `LIBELLE`, `QUANTITE`, `PRIX`, `IMAGE`, p.`ID_CAT` FROM `product` p INNER join category on p.ID_CAT=category.ID_CAT and category.LIBELLE_CAT like '".$_GET['cat']."'");
+                if ($stmt->rowCount()>0) {
+                  while($row = $stmt->fetch()){
+                    echo 
+                    ' <div class="col-lg-4 col-md-6 col-sm-12 product_con">
+                      <div class="product">
+                        <img height="250" width="200" src="images/'.$row['IMAGE'].'">
+                        <h5 class="product_name">'.$row['LIBELLE'].'</h5>
+                        <h4 class="product_price">'.$row['PRIX'].' $</h4>
+                      </div>
+                  </div>
+                    ';
+                  }
+                } 
+
+              }
+
             ?>
         </div>
       </div>
+
       <script src="assets/js/script.js"></script>
 <?php 
   require_once 'footer.php' 

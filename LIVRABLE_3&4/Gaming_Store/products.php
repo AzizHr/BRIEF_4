@@ -51,8 +51,8 @@ require_once 'header.php';
             ?>
         </div>
       </div>
-
-      <?php 
+      <script src="assets/js/script.js"></script>
+<?php 
   require_once 'footer.php' 
 ?>
 

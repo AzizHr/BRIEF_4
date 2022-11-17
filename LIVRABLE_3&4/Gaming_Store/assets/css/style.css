@@ -51,7 +51,7 @@
     margin: 0 auto;
 }
 .ctr{
-    margin-top: 10rem;
+    margin-top: 4rem;
 }
 .row{
     row-gap: 8rem;
@@ -87,7 +87,6 @@
     padding-left: 10px;
     width: 220px;
     background-color: white;
-    color: white;
 }
 .footer .letter .subscribe{
     border: none;
@@ -189,11 +188,4 @@
 #btn_login{
     font-weight: bold;
     font-size: 20px;
-}
-.categories{
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

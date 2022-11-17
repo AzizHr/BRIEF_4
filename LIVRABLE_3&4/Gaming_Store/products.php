@@ -14,18 +14,17 @@ require_once 'header.php';
             </div>
         </div>
       </div>
-      <div class="container second_cont">
-        <div class="row">
-            <div class="col-md-3 cat ">
-                <p class="select">Computers</p> 
+      <div class="categories">
+            <div class="category">
+                <p class="">Computers</p> 
             </div>
-            <div class="col-md-3 cat">
+            <div class="category">
                 <p>Keyboards</p> 
             </div>
-            <div class="col-md-3 cat">
+            <div class="category">
                 <p>Mouses</p> 
             </div>
-            <div class="col-md-3 cat">
+            <div class="category">
                 <p>Speakers</p> 
             </div>
         </div>

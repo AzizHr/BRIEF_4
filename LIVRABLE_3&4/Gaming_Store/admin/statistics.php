@@ -41,7 +41,7 @@ require_once '../php/database.php';
             </div>
         </div>
     </nav>
-    <div class="container align-content-center" style="margin-top:100px;">
+    <div class="container align-content-center" style="margin-top:100px; margin-bottom:80px;">
         <div class="row sts">
             <div class="col-lg-3 col-md-6 col-sm-12">
                 <div class="sts_h1">

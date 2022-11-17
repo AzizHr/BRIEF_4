@@ -1,9 +1,9 @@
 <?php 
   require_once '../php/database.php';
 
-$id=$_GET['id'];
+$_SESSION["ID"] = $_GET['id'];
 $stmt=$conn->prepare("SELECT LIBELLE , QUANTITE , PRIX , IMAGE FROM `product` WHERE ID=:id");
-$stmt->bindParam(':id',$id);
+$stmt->bindParam(':id',$_SESSION["ID"]);
 $stmt->execute();
 if ($stmt->rowCount() > 0) {
   while($row=$stmt->fetch()){
@@ -56,10 +56,6 @@ if ($stmt->rowCount() > 0) {
     <div class="container add">
         <h2 class="text-center">Update a Product</h2>
         <div style="width: 160px; height:160px; align-self: center;"><img src="../images/<?php echo $image1 ?>" alt="" style="width: 100%; height:100%;"></div>
-        <div>
-            <label for="id" class="form-text">Numero</label>
-            <input type="text" name="id" class="form-control" value="<?php echo $id; ?>">
-        </div>
         <div>
             <label for="libelle" class="form-text">Name</label>
             <input type="text" name="libelle" class="form-control" value="<?php echo $libelle1; ?>">

@@ -172,24 +172,6 @@
 .first_cont , .second_cont{
     margin-top: 70px;
 }
-
-.cat p{
-    text-align: center;
-    width: 200px;
-    height: 50px;
-    border: 2px solid #d0d0ff;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.cat .select{
-    background: rgba(75, 71, 252, 0.14);
-    color: #4B47FC;
-    border: 2px solid #4B47FC;
-}
-
-
 /* login style */
 .cnt_login{
     margin-top: 70px;
@@ -207,4 +189,11 @@
 #btn_login{
     font-weight: bold;
     font-size: 20px;
+}
+.categories{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

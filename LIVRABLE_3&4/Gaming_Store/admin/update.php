@@ -1,7 +1,5 @@
 <?php
     require_once '../php/database.php';
-    
-    $id=$_GET["id"];
     $libelle = $_GET["libelle"];
     $quantite = $_GET["quantite"];
     $prix = $_GET["prix"];
@@ -12,7 +10,7 @@
         $query->bindParam(":L" , $libelle);
         $query->bindParam(":Q" , $quantite);
         $query->bindParam(":P" , $prix);
-        $query->bindParam(":id" , $id);
+        $query->bindParam(":id" , $_SESSION["ID"]);
         $query->execute();
         header("location:management.php");
         exit();
@@ -22,7 +20,7 @@
         $query->bindParam(":Q" , $quantite);
         $query->bindParam(":P" , $prix);
         $query->bindParam(":I" , $image);
-        $query->bindParam(":id" , $id);
+        $query->bindParam(":id" , $_SESSION["ID"]);
         $query->execute();
         header("location:management.php");
         exit();

@@ -15,12 +15,12 @@
               </div>
               <p>Sell Gaming Materilas</p>
             </div>
-            <div class="col-md-4 col-sm-12 f_d_c">
+            <div class="col-md-4 col-sm-12 footer-service">
               <h3>Service</h3>
               <p>Products</p>
               <p>Contact Us</p>
             </div>
-            <div class="col-md-4 col-sm-12 f_d_c">
+            <div class="col-md-4 col-sm-12 footer-service">
               <h3>Contact</h3>
               <p>gaming_store@gmail.com</p>
               <p>+212 6 23 11 10 79</p>

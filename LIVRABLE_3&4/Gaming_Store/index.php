@@ -125,7 +125,7 @@ require_once 'header.php'
           <div class="review">
             <div class="r-img"><img src="images/user2.jpg" alt=""></div>
             <div class="r-info">
-              <h5>Mohamed Amin</h5>
+              <h5>Mohammed Kandirou</h5>
               <p>Best Pcs Gaming</p>
             </div>
           </div>

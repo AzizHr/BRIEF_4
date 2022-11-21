@@ -96,7 +96,7 @@
           <?php
           $stmt=$conn->query("SELECT `ID_CAT`, `LIBELLE_CAT` FROM `category`");
           if($stmt->rowCount()>0){
-            echo '<select name="cat">';
+            echo '<select name="cat" >';
             while($row=$stmt->fetch()){
               echo '<option value='.$row['ID_CAT'].'>'.$row['LIBELLE_CAT'].'</option>';
             }

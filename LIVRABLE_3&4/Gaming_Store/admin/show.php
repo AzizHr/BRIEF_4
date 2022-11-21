@@ -52,7 +52,7 @@ if ($stmt->rowCount() > 0) {
               </div>
             </div>
         </nav>
-    <form method="GET" action="update.php" enctype="multipart/form-data">
+    <form method="POST" action="update.php" enctype="multipart/form-data">
     <div class="container add">
         <h2 class="text-center">Update a Product</h2>
         <div style="width: 160px; height:160px; align-self: center;"><img src="../images/<?php echo $image1 ?>" alt="" style="width: 100%; height:100%;"></div>

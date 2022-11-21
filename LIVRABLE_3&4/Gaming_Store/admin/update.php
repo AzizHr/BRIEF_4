@@ -1,11 +1,11 @@
 <?php
     require_once '../php/database.php';
-    $libelle = $_GET["libelle"];
-    $quantite = $_GET["quantite"];
-    $prix = $_GET["prix"];
-    $image = $_GET['image'];
+    $libelle = $_POST["libelle"];
+    $quantite = $_POST["quantite"];
+    $prix = $_POST["prix"];
+    $image = $_FILES['image']['name'];
 
-    if($image == NULL){
+    if($image==null){
         $query = $conn->prepare("UPDATE product SET LIBELLE = :L , QUANTITE = :Q , PRIX = :P WHERE ID=:id");
         $query->bindParam(":L" , $libelle);
         $query->bindParam(":Q" , $quantite);
@@ -22,6 +22,7 @@
         $query->bindParam(":I" , $image);
         $query->bindParam(":id" , $_SESSION["ID"]);
         $query->execute();
+        move_uploaded_file($_FILES['image']['tmp_name'],"../images/$image");
         header("location:management.php");
         exit();
     }

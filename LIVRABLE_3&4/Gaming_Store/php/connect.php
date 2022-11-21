@@ -11,6 +11,7 @@ $stmt->bindParam(':pass',$pass);
 $stmt->execute();
 if ($stmt->rowCount()>0) {
   while($row = $stmt->fetch()){
+    $_SESSION['ID']=$row['USERNAME'];
     $_SESSION['name']=$row['USERNAME'];
     $_SESSION['pass']=$row['PASSWORD'];
     header('location:../admin/management.php');

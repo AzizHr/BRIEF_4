@@ -1,6 +1,16 @@
 <?php
 require_once '../php/database.php';
+
+if(isset($_SESSION['ID'])==false){
+    header("location:../login.php");
+    exit();
+}
+else
+{
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -114,3 +124,5 @@ require_once '../php/database.php';
 </body>
 
 </html>
+
+<?php } ?> 

@@ -114,15 +114,59 @@
     width: 80%;
     height: 80%;
 }
-.footer-service h3{
+.f_d_c h3{
     color: #E6E6E6;
 }
-.footer-service p{
+.f_d_c p{
     color: white;
 }
 .footer_down{
     margin-top: 80px;  
 }
+.user-reviews{
+    margin-top:160px;
+    padding-bottom:100px;
+  }
+  .reviews-row{
+    display:flex;
+    row-gap:60px;
+  }
+  .review{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    column-gap:20px;
+  }
+  .review .r-info{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-top:50px;
+  }
+  .r-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 90px;
+  }
+  .r-img img{
+    width: 100%;
+    border-radius: 90px;
+  }
+  .about-us{
+    margin-top:200px;
+  }
+  .about{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .about h1{
+    font-size:50px;
+  }
+  .about p{
+    font-size:20px;
+  }
 @media (max-width:740px) {
     .container1{
         margin-top: -120px;

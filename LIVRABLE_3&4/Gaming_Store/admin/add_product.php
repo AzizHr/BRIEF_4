@@ -55,6 +55,7 @@
             $query->bindParam("I" , $image);
             $query->bindParam("C" , $idcat);
             if($query->execute()){
+                move_uploaded_file($_FILES['image']['tmp_name'],"../images/$image");
                 echo '<div class="alert alert-success container mt-5" role="alert">
                 A Product has been added successfully!
               </div>';

@@ -46,12 +46,14 @@
             $quantite = $_POST["quantite"];
             $prix = $_POST["prix"];
             $image = $_FILES['image']['name'];
+            $idcat=$_POST["cat"];
 
-            $query = $conn->prepare("INSERT INTO product (LIBELLE , QUANTITE , PRIX , IMAGE)  VALUES (:L , :Q , :P , :I)");
+            $query = $conn->prepare("INSERT INTO product (LIBELLE , QUANTITE , PRIX , IMAGE, ID_CAT)  VALUES (:L , :Q , :P , :I, :C)");
             $query->bindParam("L" , $libelle);
             $query->bindParam("Q" , $quantite);
             $query->bindParam("P" , $prix);
             $query->bindParam("I" , $image);
+            $query->bindParam("C" , $idcat);
             if($query->execute()){
                 echo '<div container class="alert alert-success" role="alert">
                 A Product has been added successfully!
@@ -88,6 +90,19 @@
         <div>
         <label for="image" class="form-text">Update product image</label>
         <input type="file" name="image" class="form-control">
+        </div>
+        <div>
+          <label for="image" class="form-text">Category :</label><br>
+          <?php
+          $stmt=$conn->query("SELECT `ID_CAT`, `LIBELLE_CAT` FROM `category`");
+          if($stmt->rowCount()>0){
+            echo '<select name="cat">';
+            while($row=$stmt->fetch()){
+              echo '<option value='.$row['ID_CAT'].'>'.$row['LIBELLE_CAT'].'</option>';
+            }
+            echo '</select>';
+          }
+           ?>
         </div>
         <div class="btns">
             <button class="btn btn-warning" name="cencel">Cencel</button>

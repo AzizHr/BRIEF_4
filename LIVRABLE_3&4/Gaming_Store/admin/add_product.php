@@ -55,12 +55,12 @@
             $query->bindParam("I" , $image);
             $query->bindParam("C" , $idcat);
             if($query->execute()){
-                echo '<div container class="alert alert-success" role="alert">
+                echo '<div class="alert alert-success container mt-5" role="alert">
                 A Product has been added successfully!
               </div>';
             }
             else{
-                echo '<div container class="alert alert-success" role="alert">
+                echo '<div class="alert alert-success container mt-5" role="alert">
                 A Product has not been added!
               </div>';
             }

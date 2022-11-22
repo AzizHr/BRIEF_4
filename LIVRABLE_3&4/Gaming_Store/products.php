@@ -16,7 +16,7 @@ require_once 'header.php';
         </div>
       </div>
       <div class="categories">
-          <div class="category selected" id="Computers">
+          <div class="category" id="Computers">
               <p>Computers</p> 
           </div>
           <div class="category" id="Keyboards">

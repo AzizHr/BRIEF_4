@@ -16,10 +16,6 @@
     width: 140px;
     padding-top: 11px;
 }
-.categories .selected{
-    background-color: #4a47fc20;
-    color: #4B47FC;
-}
 .categories .category p{
     font-weight: bold;
 }

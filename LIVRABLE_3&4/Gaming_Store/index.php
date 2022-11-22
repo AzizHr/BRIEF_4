@@ -9,12 +9,20 @@ require_once 'header.php'
         .reviews-row{
           display:flex;
           row-gap:60px;
+          justify-content:center;
+          align-items:center;
+        }
+        .reviews-row .r-holder{
+          display:flex;
+          justify-content:center;
+          align-items:center;
         }
         .review{
           display:flex;
           align-items:center;
-          justify-content:center;
+          justify-content:space-around;
           column-gap:20px;
+          width:280px;
         }
         .review .r-info{
           display:flex;
@@ -45,6 +53,18 @@ require_once 'header.php'
         }
         .about p{
           font-size:20px;
+        }
+        .about-img img{
+            width:80%;
+          }
+        @media (max-width:768px) {
+          .about-img{
+            display: flex;
+            justify-content: center;
+          }
+          .about-img img{
+            width:90%;
+          }
         }
       </style>
       <div class="GS container justify-content-center mt-5">
@@ -98,10 +118,10 @@ require_once 'header.php'
 
       <div class="container about-us">
         <div class="row about">
-          <div class="col-lg-8">
-            <img src="images/about-us.jpg" alt="" style="width:80%;">
+          <div class="col-lg-8 col-md-12 about-img" style="display: flex; justify-content: center;">
+            <img src="images/about-us.jpg" alt="">
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-12" tyle="width:80%; text-align:center;">
             <h1>About Us</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A possimus veritatis iure, dignissimos rerum error libero? Fuga consequatur ullam cumque voluptatibus. Facere in dignissimos fugit autem eius numquam! Ducimus, quibusdam!</p>
           </div>
@@ -112,39 +132,39 @@ require_once 'header.php'
       <div class="container justify-content-center user-reviews">
         <h2 class="text-center">Our Clients Reviews</h2>
         <div class="row mt-5 reviews-row">
-        <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="col-lg-3 col-md-6 col-sm-12 r-holder">
           <div class="review">
             <div class="r-img"><img src="images/user1.jpg" alt=""></div>
             <div class="r-info">
-              <h5>Aziz Harkati</h5>
-              <p>Good Gaming Store</p>
+              <h5>User Name</h5>
+              <p>User Review Here</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="col-lg-3 col-md-6 col-sm-12 r-holder">
           <div class="review">
             <div class="r-img"><img src="images/user2.jpg" alt=""></div>
             <div class="r-info">
-              <h5>Mohammed Kandirou</h5>
-              <p>Best Pcs Gaming</p>
+              <h5>User Name</h5>
+              <p>User Review Here</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="col-lg-3 col-md-6 col-sm-12 r-holder">
           <div class="review">
             <div class="r-img"><img src="images/user3.jpg" alt=""></div>
             <div class="r-info">
-              <h5>Kamal Jamal</h5>
-              <p>Nice Website</p>
+              <h5>User Name</h5>
+              <p>User Review Here</p>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="col-lg-3 col-md-6 col-sm-12 r-holder">
           <div class="review">
             <div class="r-img"><img src="images/user4.jpg" alt=""></div>
             <div class="r-info">
-              <h5>Ahmed Rabie</h5>
-              <p>Thank You</p>
+              <h5>User Name</h5>
+              <p>User Review Here</p>
             </div>
           </div>
         </div>

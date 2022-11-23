@@ -79,7 +79,7 @@ else
                     echo
                     '
                         <tr>
-                        <td><p class="text-center"><img height="100" width="100" src="../images/' . $row['IMAGE'] . '"></p></td>
+                        <td><p class="text-center"><img height="90" width="90" src="../images/' . $row['IMAGE'] . '"></p></td>
                         <td><p class="text-center">' . $row['ID'] . '</p></td>
                         <td><p class="text-center">' . $row['LIBELLE'] . '</p></td>
                         <td><p class="text-center">' . $row['QUANTITE'] . '</p></td>

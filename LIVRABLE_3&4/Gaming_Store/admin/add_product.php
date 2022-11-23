@@ -106,7 +106,7 @@
            ?>
         </div>
         <div class="btns">
-            <button class="btn btn-warning" name="cencel">Cencel</button>
+            <button class="btn btn-warning" name="cencel">Cancel</button>
             <button class="btn btn-success" name="save">Save</button>
         </div>
     </div>

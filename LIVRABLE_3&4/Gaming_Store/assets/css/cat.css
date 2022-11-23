@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-around;
     margin-top: 200px;
+    column-gap: 20px;
 }
 .categories .category{
     border-radius: 10px;
@@ -13,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 140px;
+    width: 130px;
     padding-top: 11px;
 }
 .categories .category p{

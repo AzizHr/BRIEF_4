@@ -97,20 +97,24 @@ else
         </table>
 
         <script>
+            //delete product
             var prodDelete = document.querySelectorAll(".delete");
             prodDelete.forEach((prod) => {
                 prod.addEventListener('click', function() {
                     location.replace("delete_prod.php?id="+prod.value+"");
                 });
             });
-
+            //update product
             var prodUpdate = document.querySelectorAll(".update");
             prodUpdate.forEach((prod1) => {
                 prod1.addEventListener('click', function() {
                     location.replace("show.php?id="+prod1.value+"");
                 });
             })
+
+           
         </script>
+         <!-- add product -->
         <div class="container d-flex justify-content-center pb-5">
             <form method="POST" action="add_product.php">
                 <button type="submit" class="btn btn-success" name="add">Ajouter</button>

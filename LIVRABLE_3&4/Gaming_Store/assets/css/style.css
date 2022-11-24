@@ -188,6 +188,18 @@
     row-gap: 20px;
 }
 }
+@media (max-width:430px) {
+    .footer .letter .send_email input{
+        width: 190px;
+    }
+    .footer .letter .subscribe{
+        margin-left: 10px;
+    }
+    .container1 .h1{
+        width: 20rem;
+        margin-bottom: 40px;
+    }
+}
 
 
 

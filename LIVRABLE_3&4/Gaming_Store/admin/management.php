@@ -50,7 +50,7 @@ else
             </div>
         </div>
     </nav>
-    <div class="container mt-5 justify-content-center">
+    <div class="container mt-5 justify-content-center" id="manage">
         <table class="table" style="width:100%;">
             <thead>
                 <th>
@@ -110,17 +110,15 @@ else
                 prod1.addEventListener('click', function() {
                     location.replace("show.php?id="+prod1.value+"");
                 });
-            })
-
-           
+            })   
         </script>
-         <!-- add product -->
-        <div class="container d-flex justify-content-center pb-5">
+         <!-- add product --> 
+    </div>
+    <div class="container d-flex justify-content-center pb-5">
             <form method="POST" action="add_product.php">
                 <button type="submit" class="btn btn-success" name="add">Ajouter</button>
             </form>
         </div>
-    </div>
 
 
     <!-- JavaScript Bundle with Popper -->

@@ -66,12 +66,7 @@
               </div>';
             }
 
-        }
-        if(isset($_POST["cencel"])){
-            header("location:management.php");
-            exit();
-        }
-    
+        }  
     ?>
     <form method="POST" enctype="multipart/form-data">
     <div class="container add" >
@@ -106,7 +101,7 @@
            ?>
         </div>
         <div class="btns">
-            <button class="btn btn-warning" name="cencel">Cancel</button>
+            <a href="./management.php" class="btn btn-warning" name="cencel">Cancel</a>
             <button class="btn btn-success" name="save">Save</button>
         </div>
     </div>

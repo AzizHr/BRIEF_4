@@ -58,19 +58,19 @@ if ($stmt->rowCount() > 0) {
         <div style="width: 160px; height:160px; align-self: center;"><img src="../images/<?php echo $image1 ?>" alt="" style="width: 100%; height:100%;"></div>
         <div>
             <label for="libelle" class="form-text">Name</label>
-            <input type="text" name="libelle" class="form-control" value="<?php echo $libelle1; ?>">
+            <input type="text" name="libelle" class="form-control" value="<?php echo $libelle1; ?>" required>
         </div>
         <div>
             <label for="quantite" class="form-text">Quantite</label>
-            <input type="text" name="quantite" class="form-control" value="<?php echo $quantite1; ?>">
+            <input type="text" name="quantite" class="form-control" value="<?php echo $quantite1; ?>"required>
         </div>
         <div>
             <label for="prix" class="form-text">Price</label>
-            <input type="text" name="prix" class="form-control" value="<?php echo $prix1; ?>">
+            <input type="text" name="prix" class="form-control" value="<?php echo $prix1; ?>"required>
         </div>
         <div>
         <label for="image" class="form-text">Update product image</label>
-        <input type="file" name="image" class="form-control">
+        <input type="file" name="image" class="form-control"required>
         </div>
         <div class="btns">
             <button class="btn btn-warning">Cencel</button>

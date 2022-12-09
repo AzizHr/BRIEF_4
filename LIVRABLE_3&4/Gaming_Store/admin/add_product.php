@@ -78,19 +78,19 @@
         <h2 class="text-center">Add a Product</h2>
         <div>
             <label for="libelle" class="form-text">Name</label>
-            <input type="text" name="libelle" class="form-control">
+            <input type="text" name="libelle" class="form-control" required>
         </div>
         <div>
             <label for="quantite" class="form-text">Quantite</label>
-            <input type="text" name="quantite" class="form-control" valu>
+            <input type="text" name="quantite" class="form-control" required>
         </div>
         <div>
             <label for="prix" class="form-text">Price</label>
-            <input type="text" name="prix" class="form-control">
+            <input type="text" name="prix" class="form-control" required>
         </div>
         <div>
         <label for="image" class="form-text">Update product image</label>
-        <input type="file" name="image" class="form-control">
+        <input type="file" name="image" class="form-control" required>
         </div>
         <div>
           <label for="image" class="form-text">Category :</label><br>

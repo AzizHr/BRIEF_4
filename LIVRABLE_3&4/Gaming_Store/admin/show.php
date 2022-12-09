@@ -70,7 +70,7 @@ if ($stmt->rowCount() > 0) {
         </div>
         <div>
         <label for="image" class="form-text">Update product image</label>
-        <input type="file" name="image" class="form-control"required>
+        <input type="file" name="image" class="form-control">
         </div>
         <div class="btns">
             <button class="btn btn-warning">Cencel</button>

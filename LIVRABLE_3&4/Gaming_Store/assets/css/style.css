@@ -199,6 +199,9 @@
         width: 20rem;
         margin-bottom: 40px;
     }
+    table {
+        width: 80%;
+    }
 }
 
 

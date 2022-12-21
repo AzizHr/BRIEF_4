@@ -77,7 +77,7 @@
         </div>
         <div>
             <label for="quantite" class="form-text">Quantite</label>
-            <input type="text" name="quantite" class="form-control" required>
+            <input type="text" name="quantite" class="form-control" required min="1">
         </div>
         <div>
             <label for="prix" class="form-text">Price</label>

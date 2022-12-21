@@ -62,7 +62,7 @@ if ($stmt->rowCount() > 0) {
         </div>
         <div>
             <label for="quantite" class="form-text">Quantite</label>
-            <input type="text" name="quantite" class="form-control" value="<?php echo $quantite1; ?>"required>
+            <input type="text" name="quantite" class="form-control" value="<?php echo $quantite1; ?>" required min="1">
         </div>
         <div>
             <label for="prix" class="form-text">Price</label>
